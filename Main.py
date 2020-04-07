@@ -94,12 +94,12 @@ class ActivityOfNuclearDecay:
             t.append(time*self.time_multiplier/1000)
 
         # Do all the plot stuff
-        plt.plot(t, self.A_U234_l, label="Uran-234")
+        plt.plot(t, self.A_U234_l, label="Uranium-234")
         plt.plot(t, self.A_Th230_l, label="Thorium-230")
         plt.plot(t, self.A_Ra226_l, label="Radium-226")
         plt.plot(t, self.A_Rn222_l, label="Radon-222")
         plt.plot(t, self.A_total, label="Total Activity")
-        plt.legend = True
+        plt.legend(labels=["Uranium-234", "Thorium-230", "Radium-226", "Radon-222", "Total Activity"], loc="upper right")
         plt.title('Activity of Nucleus')
         plt.xlabel('Time [kilo-years]')
         plt.ylabel('Activity [Bq]')
@@ -109,7 +109,7 @@ class ActivityOfNuclearDecay:
     def print_results(self):
         print(" ")
         print("Activity after ", self.time_max, "years")
-        print("Uran-234:        ", self.A_U234_l[-1])
+        print("Uranium-234:     ", self.A_U234_l[-1])
         print("Thorium-230:     ", self.A_Th230_l[-1])
         print("Radium-226:      ", self.A_Ra226_l[-1])
         print("Radon-222:       ", self.A_Rn222_l[-1])
