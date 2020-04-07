@@ -7,10 +7,10 @@ class ActivityOfNuclearDecay:
     """ Main class for simulation """
     def __init__(self):
         # Variables
-        self.time_multiplier = 5   # For really long max time
+        self.time_multiplier = 1   # For really long max time
 
         # Number of nucleus at time = 0
-        self.N_U234 = 1000 * 1000000000
+        self.N_U234 = 1000000 * 1000000000
         self.N_Th230 = 0
         self.N_Ra226 = 0
         self.N_Rn222 = 0
@@ -51,6 +51,9 @@ class ActivityOfNuclearDecay:
 
         # Run the simulation
         self.simulate()
+
+        # Print results
+        self.print_results()
 
         # Plot results
         self.plot_results()
@@ -102,6 +105,15 @@ class ActivityOfNuclearDecay:
         plt.ylabel('Activity [Bq]')
         plt.grid(True)
         plt.show()
+
+    def print_results(self):
+        print(" ")
+        print("Activity after ", self.time_max, "years")
+        print("Uran-234:        ", self.A_U234_l[-1])
+        print("Thorium-230:     ", self.A_Th230_l[-1])
+        print("Radium-226:      ", self.A_Ra226_l[-1])
+        print("Radon-222:       ", self.A_Rn222_l[-1])
+        print(" ")
 
 
 run = ActivityOfNuclearDecay()
