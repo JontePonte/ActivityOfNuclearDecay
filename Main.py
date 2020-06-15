@@ -12,8 +12,8 @@ class ActivityOfNuclearDecay:
         # Number of nucleus at time = 0
         self.N_U234 = 1000000 * 1000000000
         self.N_Th230 = 0
-        self.N_Ra226 = 0
         self.N_Rn222 = 0
+        self.N_Ra226 = 0
 
         # Half life of the nucleus (in years)
         self.T_U234 = 245500 / self.time_multiplier
